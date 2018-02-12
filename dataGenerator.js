@@ -17,23 +17,23 @@ var csvWriter = createCsvWriter({
     {id: 'user_id', title: 'user_id'},
     {id: 'product_id', title: 'product_id'},
     {id: 'quant', title: 'quant'},
-    {id: 'id', title: 'id'},
-    {id: 'ordered_at', title: 'ordered_at'},
+    // {id: 'id', title: 'id'},
+    // {id: 'ordered_at', title: 'ordered_at'},
   ]
 })
 let records = [];
-for (var i = 0; i < 1000000; i++) {
+for (var i = 0; i < 100000; i++) {
 
-    var randomUserId = Math.round(Math.random() * (10000000 - 9000001) + 9000001)
+    var randomUserId = Math.round(Math.random() * (1000000 - 1) + 1)
     var randomQuant = Math.round(Math.random() * (250 -1) + 1);
     var randomProduct = Math.round(Math.random() * (10000000 - 1) + 1)
-    var date = faker.date.between('2017-12-01', '2018-02-27').toISOString();
+    // var date = faker.date.between('2017-12-01', '2018-02-27').toISOString();
     let record = {
       user_id: randomUserId,
       product_id: randomProduct,
       quant: randomQuant,
-      id: faker.random.uuid(),
-      ordered_at: date,
+      // id: faker.random.uuid(),
+      // ordered_at: date,
     }
 
     records[i] = record;

@@ -1,0 +1,16 @@
+/*
+insert into orders (id, user_id, user_email, product_id, quant, viewed_at) values (uuid(), 5, 'janet@gmail.com', 5, 60, dateof(now()))
+*/
+
+
+// client.execute("SELECT * FROM orders_services.orders where quant < 50 limit 100 allow filtering;",
+//  [], { prepare : true }, (err, results) => {
+//   console.log(results)
+//   console.log(`Duration: ${(new Date() - startTime) / 1000}s`);
+// });
+
+// client.execute("SELECT * FROM orders_services.orders_by_date WHERE ordered_at >= '2018-02-24 16:00:00+0000' AND  ordered_at <= '2018-02-25 16:00:00+0000' LIMIT 20 ALLOW FILTERING;",
+//  [], { prepare : true }, (err, results) => {
+//   console.log(results)
+//   console.log(`Duration: ${(new Date() - startTime) / 1000}s`);
+// });

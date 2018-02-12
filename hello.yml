@@ -1,0 +1,26 @@
+config:
+  target: 'http://127.0.0.1:3000'
+  http: 
+      pool: 50 
+  phases:
+    - duration: 60
+      arrivalRate: 5
+      rampTo: 50
+    - duration: 60
+      arrivalRate: 300
+
+  payload:
+    # path is relative to the location of the test script
+    path: 'ordersTotal.csv'
+    fields:
+      - 'user_id'
+      - 'product_id'
+      - 'quant'
+scenarios:
+  - flow:
+    - post:
+        url: '/orders'
+        json:
+          user_id: "{{ user_id }}"
+          product_id: "{{ product_id }}"
+          quant: "{{ quant }}"
