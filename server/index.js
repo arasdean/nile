@@ -1,15 +1,15 @@
-const nr = require('newrelic');
+//const nr = require('newrelic');
 const koa = require('koa');
 const logger = require('koa-logger')
 const Router = require('koa-router');
 const bodyParser = require('koa-bodyparser')
 const app = new koa();
 var router = new Router();
-const cassandra = require('cassandra-driver');
-const database = new cassandra.Client({contactPoints: ["127.0.0.1:9042"], keyspace: 'orders_services'});
-database.connect((err, results) => {
-  console.log('cassandra connected!')
-})
+//const cassandra = require('cassandra-driver');
+//const database = new cassandra.Client({contactPoints: ["127.0.0.1:9042"], keyspace: 'orders_services'});
+//database.connect((err, results) => {
+//  console.log('cassandra connected!')
+//})
 
 app.use(logger())
   .use(bodyParser()) 
